@@ -15,7 +15,7 @@ var rollbar = new Rollbar({
 });
 
 // record a generic message and send it to Rollbar
-rollbar.log("Hello Arthur!");
+rollbar.log("Hello Panda!");
 
 // app.get('/', (req, res) =>{
 //     rollbar.info("HTML served successfully");
