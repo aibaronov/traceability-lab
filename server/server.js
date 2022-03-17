@@ -7,6 +7,16 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+var Rollbar = require("rollbar");
+var rollbar = new Rollbar({
+  accessToken: '1ea5b8d0d5a34402ac3f6d546109d566',
+  captureUncaught: true,
+  captureUnhandledRejections: true
+});
+
+// record a generic message and send it to Rollbar
+rollbar.log("Hello world!");
+
 //Middleware
 app.use(express.static(path.join(__dirname, "../public")));
 // app.use("/styles", express.static(path.join(__dirname, "../public/index.css")));
