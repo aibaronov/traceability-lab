@@ -17,12 +17,12 @@ var rollbar = new Rollbar({
 // record a generic message and send it to Rollbar
 rollbar.log("Hello Arthur!");
 
-app.get('/', (req, res) =>{
-    rollbar.info("HTML served successfully");
-    res.sendFile(path.join(__dirname, '/public/index.html'))
-})
+// app.get('/', (req, res) =>{
+//     rollbar.info("HTML served successfully");
+//     res.sendFile(path.join(__dirname, '/public/index.html'))
+// })
 //Middleware
-// app.use(express.static(path.join(__dirname, "../public")));
+app.use(express.static(path.join(__dirname, "../public")));
 // app.use("/styles", express.static(path.join(__dirname, "../public/index.css")));
 
 // app.get("/", function(req, res){
